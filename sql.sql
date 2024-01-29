@@ -21,7 +21,11 @@ CREATE TABLE AddressBook (
 		('Rasikaa','Deshmukh','Pune','Kharadi','Maharastra',411105,9888888880,'rasika@gmail.com'),
 		('tanavi','banait','Mumbai','Airoli','Maharastra',444100,9345678900,'tanavibanait@gmail.com');
         SELECT *from AddressBoook;
-        
+      #UC4:-update contact.  
 		UPDATE AddressBook SET city='Delhi' where first_name='Rucha';
         UPDATE AddressBook SET city='Delhi' WHERE first_name='Rucha' AND key_column_name = key_value;
 SET SQL_SAFE_UPDATES = 0;
+
+	#UC5:-Delete person using persons name 
+        DELETE FROM AddressBook WHERE first_name='Nikita';
+        select * FROM AddressBook;
