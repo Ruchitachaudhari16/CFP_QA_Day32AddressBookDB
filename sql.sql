@@ -36,3 +36,27 @@ SET SQL_SAFE_UPDATES = 0;
 		SELECT COUNT(*) From AddressBook WHERE city='Amravti' ;
         SELECT COUNT(*) From AddressBook WHERE state ='Maharastra';
         # SELECT COUNT(*) From AddressBook WHERE city='Amravti' AND state ='Maharastra' ;
+        
+        #UC8 Ability to retrieve entries sorted 
+		SELECT * From AddressBook ORDER BY city ASC;
+		SELECT * From AddressBook Where city='Amravti' ORDER BY first_name ASC;
+		SELECT * From AddressBook ORDER BY first_name;
+        
+        #UC9:-Ability to identify each Address Book with name and type.
+		-- Here the type could Family, Friends,Profession, etc Alter Address Book to add name and type
+		ALTER TABLE AddressBook ADD AddressBookType VARCHAR(50);
+		ALTER TABLE AddressBook ADD AddressBookName VARCHAR(50);
+		UPDATE AddressBook SET AddressBookType='Friends',AddressBookName='AB' 
+		WHERE id='2';
+		
+		UPDATE AddressBook SET AddressBookType='Friends' ,AddressBookName='KL' 
+		WHERE id='4';
+		UPDATE AddressBook SET AddressBookType='Office' ,AddressBookName='MN' 
+		WHERE id='5';
+		UPDATE AddressBook SET AddressBookType='Emergancy' ,AddressBookName='NB' 
+		WHERE id='1';
+		UPDATE AddressBook SET AddressBookType='Friends' ,AddressBookName='Siu' 
+		WHERE id='6';
+       
+       
+        
