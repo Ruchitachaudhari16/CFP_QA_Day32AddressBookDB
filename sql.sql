@@ -11,9 +11,7 @@ CREATE TABLE AddressBook (
     phone_number VARCHAR(15),
     email VARCHAR(255)
 );
-
-
-		INSERT INTO AddressBook(first_name,last_name,address,city,state,zip,phone_number,email)
+        INSERT INTO AddressBook(first_name,last_name,address,city,state,zip,phone_number,email)
         VALUES 
 		('Ruchita','Chaudhari','RadhaNagar','Amravti','Maharastra',444105,9158834080,'cruchi@gmail.com'),
 		('Rucha','Ingale','Alkachowk','Pune','Maharastra',444105,9158834080,'rucha@gmail.com'),
@@ -22,3 +20,8 @@ CREATE TABLE AddressBook (
 		('shama','ingale','rahatni','Amravti','Maharastra',400105,9356763410,'shamaingale@gmail.com'),
 		('Rasikaa','Deshmukh','Pune','Kharadi','Maharastra',411105,9888888880,'rasika@gmail.com'),
 		('tanavi','banait','Mumbai','Airoli','Maharastra',444100,9345678900,'tanavibanait@gmail.com');
+        SELECT *from AddressBoook;
+        
+		UPDATE AddressBook SET city='Delhi' where first_name='Rucha';
+        UPDATE AddressBook SET city='Delhi' WHERE first_name='Rucha' AND key_column_name = key_value;
+SET SQL_SAFE_UPDATES = 0;
