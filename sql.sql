@@ -29,3 +29,5 @@ SET SQL_SAFE_UPDATES = 0;
 	#UC5:-Delete person using persons name 
         DELETE FROM AddressBook WHERE first_name='Nikita';
         select * FROM AddressBook;
+        #UC6 Ability to retrieve Person Belonging to a city or state from the AddressBook
+		SELECT * From AddressBook WHERE city='Amravti';
