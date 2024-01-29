@@ -48,15 +48,19 @@ SET SQL_SAFE_UPDATES = 0;
 		ALTER TABLE AddressBook ADD AddressBookName VARCHAR(50);
 		UPDATE AddressBook SET AddressBookType='Friends',AddressBookName='AB' 
 		WHERE id='2';
-		
 		UPDATE AddressBook SET AddressBookType='Friends' ,AddressBookName='KL' 
 		WHERE id='4';
 		UPDATE AddressBook SET AddressBookType='Office' ,AddressBookName='MN' 
 		WHERE id='5';
-		UPDATE AddressBook SET AddressBookType='Emergancy' ,AddressBookName='NB' 
+        UPDATE AddressBook SET AddressBookType='Emergancy' ,AddressBookName='NB' 
 		WHERE id='1';
 		UPDATE AddressBook SET AddressBookType='Friends' ,AddressBookName='Siu' 
 		WHERE id='6';
+        
+        #UC10-bility to get number of contact persons i.e. count by type
+		#Ruchita is variable where will store the adressbooktype count
+		SELECT AddressBookType,COUNT(AddressBookType) AS Ruchita From AddressBook GROUP BY AddressBookType;
+		
        
        
         
