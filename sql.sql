@@ -60,7 +60,14 @@ SET SQL_SAFE_UPDATES = 0;
         #UC10-bility to get number of contact persons i.e. count by type
 		#Ruchita is variable where will store the adressbooktype count
 		SELECT AddressBookType,COUNT(AddressBookType) AS Ruchita From AddressBook GROUP BY AddressBookType;
-		
+        
+        #UC11:---UC11 Ability to add person to both Friend and Family
+		INSERT INTO AddressBook(first_name,last_name,address,city,state,zip,phone_number,email,AddressBookType,AddressBookName)
+		VALUES('Dipti','Raul','Bombay','am','Maharastra',444100,9000004080,'diptir@gmail.com','Office','DE');
+		INSERT INTO AddressBook(first_name,last_name,address,city,state,zip,phone_number,email,AddressBookType,AddressBookName)
+		VALUES('Rani','Thakare','Bombay','am','Maharastra',444100,9123004080,'rani12@gmail.com','family','DA');
+        INSERT INTO AddressBook(first_name,last_name,address,city,state,zip,phone_number,email,AddressBookType,AddressBookName)
+		VALUES('Saiee','Chavan','Bombay','am','Maharastra',444100,9032324556,'saieer@gmail.com','friend','AB');
        
        
         
